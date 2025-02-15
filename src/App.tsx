@@ -1,54 +1,14 @@
 import { useState,useEffect} from "react"
 import { Menu, Home, Printer, LogOut, ChevronDown } from "lucide-react"
 import {img_url} from "../utils/constants"
+import {studentInfo} from "../utils/constants"
 
 export default function VITPortal() {
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const [currentRoomNo, setCurrentRoomNo] = useState<string>("423")
 
-  const studentInfo = {
-    registerNumber: "23BCE0226",
-    name: "SRIJAN SRIVASTAVA",
-    email: "srijan.srivastava2023@vitstudent.ac.in",
-    program: "BTECH - Computer Science and Engineering",
-    school: "School of Computer Science and Engineering",
-    hostelInfo: {
-      applicationNumber: "2023038932",
-      registerNumber: "23BCE0226",
-      blockName: "MENS HOSTEL S BLOCK ",
-      roomNo: "423",
-      bedType: "4-BED-AC",
-      messInfo: "Special Mess - RR-05-J SATHYA F.R. FOOD AND HOSPITALITY SERVICES (P BLOCK)",
-    },
-    proctorInfo: {
-      facultyId: "20056",
-      facultyName: "TANU KUKREJA",
-      designation: "Assistant Professor Sr. Grade",
-      school: "School of Social Sciences & Languages",
-      cabin: "609-E",
-      department: "Department of Social Science",
-      email: "tanu.kukreja@vit.ac.in",
-      intercom: "",
-      mobile: "---",
-    },
-    familyInfo: {
-      brothers: "1",
-      sisters: "0",
-      brotherStudyingInVIT: "NO",
-      brotherStudiedInVIT: "YES",
-      studiedDetails: "17BCE0361",
-      fatherName: "SHISHIR KUMAR SRIVASTAVA",
-      fatherQualification: "---",
-      occupation: "GOVT",
-      organization: "UTTAR PRADESH STATE GOVERNMENT",
-      mobile: "---",
-      email: "sks1r2022@gmail.com",
-      annualIncome: "---",
-      address: "BLOCK DEVELOPMENT OFFICE,SAHJANWA, GORAKHPUR",
-    },
-
-  }
-
+  
+  
   useEffect(() => {
     const updateRoomNumber = () => {
       const today = new Date()
